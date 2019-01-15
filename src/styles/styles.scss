@@ -1,0 +1,81 @@
+@import "./reset";
+
+// -=----- Fonts -=----- //
+@font-face {
+  font-family: "arvo_bold";
+  src: url("arvo.bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "arcon";
+  src: url("arcon.regular.otf");
+}
+
+// -=----- Variables -=----- //
+//global
+$backgroundColor: rgb(75, 75, 75);
+$fontColorHeader: white;
+
+//header
+$headerPaddingTop: 2em;
+$headerPaddingHorizontal: 3.8em;
+
+// ------ CSS START ------ //
+.Splash {
+}
+
+body {
+  background-color: $backgroundColor;
+  .wrapper {
+  }
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  .Name {
+    font-size: 2.5em;
+    padding-top: $headerPaddingTop/3;
+    padding-left: $headerPaddingHorizontal/3;
+    color: fontColorHeader;
+    .FirstName {
+      position: relative; // position
+      top: -10px;
+      margin-left: -40px;
+      padding-top: -21px;
+      font-family: "arcon"; // style
+    }
+    .LastName {
+      position: relative;
+      top: -30px; //TODO fix size for different screen size
+      font-size: 1.5em;
+      color: fontColorHeader;
+      font-family: "arvo_bold"; // style
+    }
+  }
+
+  .Buttons {
+    padding-top: $headerPaddingTop;
+    padding-right: $headerPaddingHorizontal;
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    .Button a {
+      font-size: 2em;
+      padding: 0 0.4em;
+      color: $fontColorHeader;
+      text-decoration: none;
+      user-select: none;
+      cursor: pointer;
+      &:hover {
+        transition: all 0.3s ease 0s;
+      }
+    }
+  }
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
