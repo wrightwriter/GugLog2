@@ -7,20 +7,41 @@ import Name from "./Name";
 
  function Header(props) {
   let {mouseX, mouseY} = props;
-  const [style, setStyle] = useState(`#background {
+  const [style, setStyle] = useState(`
+  #background {
+
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -100;
+  transition: all 300ms ease-in;
     filter: blur(0px);
-  }`);
+  }
+  
+  `);
   let path = props.location.pathname;
 
 
   function _toggleStyle(toggle){
     if (toggle=="true"){
       setStyle(`#background {
-        filter: blur(20px);
+
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -100;
+  transition: all 300ms ease-in;
+        filter: blur(10px);
       }`)
     } else if (toggle=="false"){
       setStyle(`#background {
-        filter: blur(20px);
+
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -100;
+  transition: all 300ms ease-in;
+        filter: blur(0px);
       }`)
     }
 

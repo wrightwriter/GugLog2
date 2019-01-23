@@ -7,17 +7,17 @@ export default function Button(props) {
   console.log(path)
   let isActive = path == to ? true : false;
   function onMouseEnter() {
-    props.toggleStyle('true')
+    props.toggleStyle("true")
   }
   function onMouseLeave() {
-    props.toggleStyle('false')
+    props.toggleStyle("false")
   }
 
   return (
     <nav
       className={isActive ? "ButtonActive" : "Button"}
       onMouseEnter={()=>{onMouseEnter()}}
-      onMouseEnter={()=>{onMouseLeave()}}
+      onMouseLeave={()=>{onMouseLeave()}}
       draggable="false"
       
       >
