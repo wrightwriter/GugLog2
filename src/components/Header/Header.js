@@ -8,7 +8,7 @@ import Name from "./Name";
  function Header(props) {
   let {mouseX, mouseY} = props;
   const [style, setStyle] = useState(`#background {
-    display: block;
+    filter: blur(0px);
   }`);
   let path = props.location.pathname;
 
@@ -16,11 +16,11 @@ import Name from "./Name";
   function _toggleStyle(toggle){
     if (toggle=="true"){
       setStyle(`#background {
-        display: block;
+        filter: blur(20px);
       }`)
     } else if (toggle=="false"){
       setStyle(`#background {
-        display: none;
+        filter: blur(20px);
       }`)
     }
 
