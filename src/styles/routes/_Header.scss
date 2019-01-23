@@ -1,0 +1,141 @@
+
+header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  .Name {
+    font-size: 2.5em;
+    padding-top: $headerPaddingTop/1;
+    padding-left: $headerPaddingHorizontal/1;
+    color: $fontColorHeader;
+    text-decoration: none;
+    user-select: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+
+    &:hover {
+      .LastName {
+        transform: scale(1.12, 1) translateX(6%);
+        transition: all 0.2s ease-in;
+      }
+      .FirstName {
+        color: rgba(255, 255, 255, 0);
+        transition: color 700ms ease-in;
+        transition: text-shadow 700ms ease-in;
+        // text-shadow: 0.2em 0.5em 0.9em rgba(255, 255, 255, 0.637),
+        // 0.9em 0.1em 0.6em rgb(255, 255, 255),
+        // 1.2em -0.3em 0.0em rgb(255, 255, 255)
+      }
+    }
+
+    .FirstName {
+      position: relative; // position
+      top: -10px;
+      color: rgba(245, 245, 220, 0.925);
+      margin-left: -40px;
+      padding-top: -21px;
+      transition: color 700ms ease-in;
+      transition: text-shadow 1s ease-in;
+      font-family: "arcon"; // style
+    }
+    .LastName {
+      position: relative;
+      transition: all 0.4s ease-in;
+      top: -30px; //TODO fix size for different screen size
+      font-size: 1.5em;
+      color: fontColorHeader;
+      font-family: "arvo_bold"; // style
+    }
+  }
+
+  .Buttons {
+    padding-top: $headerPaddingTop * 3;
+    padding-right: $headerPaddingHorizontal * 2.3;
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    .Button {
+      display: flex;
+      flex-direction: column;
+      user-select: none;
+      cursor: pointer;
+      transition: all 0.3s ease-out 0s;
+      &:active{
+        a{
+          background-color: rgba(255, 255, 255, 0.445);
+
+          transition: all 0.3s ease-out 0s;
+        }
+      }
+      &:hover {
+        transform: skew(-10deg);
+        transition: all 0.3s ease-in 0s;
+        .underline {
+          transform: rotateY(0deg) translate(0%);
+          transition: all 0.3s ease-out;
+        }
+      }
+      .underline {
+        background-color: $fontColorHeader;
+        margin-top: 0.1em;
+        height: 0.3em;
+        transform: rotateY(90deg) translate(-100%);
+        transition: all 0.3s ease-in;
+      }
+      a {
+        font-size: 2em;
+        font-family: "ZCOOL QingKe HuangYou", cursive;
+        padding: 0 0.6em;
+        color: $fontColorHeader;
+        text-decoration: none;
+        user-select: none;
+        cursor: pointer;
+      }
+    }
+    .ButtonActive {
+      display: flex;
+      flex-direction: column;
+      transition: all 0.3s ease-out 0s;
+      &:active{
+        a{
+          //background-color: rgba(255, 255, 255, 0.445);          transform: skew(-15deg) translateX(3px) scale(1, 1.1);
+          animation: jello2 200ms 1;
+          transition: all 0.3s ease-out 0s;
+        }
+      }
+      &:hover {
+        //transform: skew(-10deg);
+        transition: all 0.3s ease-in 0s;
+        a {
+          transform: skew(-15deg) translateX(3px) scale(1, 1.1);
+          transition: all 0.2s ease-out;
+        }
+        .underline {
+          //transform: rotateY(0deg) translateY(0%) scale(1.03, 1.4) skew(-15deg);
+
+          transition: all 0.2s ease-out;
+        }
+      }
+      .underline {
+        background-color: $fontColorHeader;
+        margin-top: 0.1em;
+        height: 0.3em;
+        transform: rotateY(90deg) translateY(-100%);
+        transition: all 0.3s ease-in;
+      }
+      a {
+        font-size: 2em;
+        font-family: "ZCOOL QingKe HuangYou", cursive;
+        color: black;
+        transform: skew(-15deg) translateX(3px);
+        transition: all 0.3s ease-out;
+        padding: 0 0.6em;
+        background-color: white;
+        text-decoration: none;
+        user-select: none;
+        cursor: pointer;
+      }
+    }
+  }
+}

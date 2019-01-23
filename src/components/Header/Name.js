@@ -4,18 +4,18 @@ import {Route, Switch} from "react-router-dom";
 
 export default class Name extends Component {
   state = {
-    x: 0,
-    y: 0,
+    mouseY: this.props.mouseY,
+    mouseX: this.props.mouseX,
   };
 
-  styleLastName = {
-    transform: `rotate(${this.state.x}deg)`,
-  };
+  // componentWillReceiveProps() {
+  //   //console.log(this.props);
+  //   let outputTrans = this.props.mouseX / window.innerWidth;
 
-  _onMouseMove(e) {
-    console.log(e);
-    this.setState({x: e.screenX, y: e.screenY});
-  }
+  //   this.styleLastName = {
+  //     transform: `rotate(${outputTrans - 1.3}deg)`,
+  //   };
+  // }
 
   render() {
     return (

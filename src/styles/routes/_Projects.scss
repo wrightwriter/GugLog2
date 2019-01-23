@@ -1,0 +1,63 @@
+
+.Projects {
+  //background-color: red;
+  color: $fontColorRoute1;
+  .Category {
+    display: flex;
+    flex-direction: column;
+    .CategoryTitle {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding-bottom: 1em;
+      padding-top: 1em;
+      div {
+        padding: 0 0.6em;
+        padding-top: 0.3em;
+        font-size: 2em;
+        background-color: white;
+        color: black;
+        //transform:
+        letter-spacing: 0.4em;
+        font-family: "nimbus";
+        font-weight: 50;
+      }
+      //color: $fontColorRoute1;
+    }
+    .Project {
+      padding-top: 2.4em;
+      img {
+        display: float;
+        //float: left;
+        margin-right: 25px;
+        width: 26em;
+        height: auto;
+      }
+      .text {
+        //float:right;
+        //margin-left: auto;
+        .title {
+          font-size: 3.4em;
+          font-family: "Merriweather", serif;
+          font-weight: 900;
+          font-style: italic;
+
+          padding-top: 0.2em;
+          padding-bottom: 0.4em;
+        }
+        .description {
+          font-size: 1.4em;
+          line-height: 1.4em;
+          font-family: "arcon";
+
+          a {
+            color: white;
+            font-weight: 400;
+            font-size: 1.4em;
+          }
+          //margin-left: auto;
+        }
+      }
+    }
+  }
+}
