@@ -26,21 +26,21 @@ import Name from "./Name";
     if (toggle=="true"){
       setStyle(`#background {
 
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  z-index: -100;
-  transition: all 300ms ease-in;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: -100;
+        transition: all 300ms ease-in;
         filter: blur(10px);
       }`)
     } else if (toggle=="false"){
       setStyle(`#background {
 
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  z-index: -100;
-  transition: all 300ms ease-in;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: -100;
+        transition: all 300ms ease-in;
         filter: blur(0px);
       }`)
     }
