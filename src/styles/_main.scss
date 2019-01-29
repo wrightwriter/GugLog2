@@ -1,3 +1,150 @@
+// ------ INTRO ANIM------ //
+
+.intro_prog.available {
+  background-color: black;
+  transform: translateY(-100%);
+  transition: all ease-in 300ms;
+  opacity: 1;
+}
+.intro_prog {
+  background-color: #0a0a0a;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  opacity: 1;
+  pointer-events: none;
+  transition: opacity cubic-bezier(0.4, 0, 0.2, 1) 436ms;
+  z-index: 9999;
+}
+.intro_logo-frame {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: fadein 436ms;
+  height: 98%;
+}
+.intro_logo-frame-img {
+  width: 112px;
+  height: 112px;
+  position: relative;
+  align-self: center;
+  border-radius: 50%;
+  div {
+    position: absolute;
+    transform-origin: bottom center;
+    animation: trianglejump 1000ms infinite;
+    fill: white;
+    svg {
+      animation: trianglechange  1000ms infinite;
+    }
+    &:nth-child(1) svg {
+      transform: rotate(0deg) translateY(90px);
+      fill: white;
+    }
+    &:nth-child(2) svg {
+      transform: rotate(120deg) translateY(90px);
+    }
+    &:nth-child(3) svg {
+      transform: rotate(240deg) translateY(90px);
+    }
+  }
+}
+@keyframes trianglechange {
+  0% {
+      filter: blur(0.4px);
+  }
+  65% {
+      filter: blur(1.9px);
+  }
+  100% {
+      filter: blur(0.4px);
+  }
+}
+@keyframes trianglejump {
+  0% {
+      filter: invert(0.4);
+    transform: scale(0.6) rotate(30deg) skewX(0deg);
+  }
+  30% {
+
+      filter: invert(0.6);
+    transform: scale(0.8) rotate(-5deg) skewX(-2deg);
+  }
+  65% {
+      filter: invert(0.9) ;
+    transform: scale(1.0) rotate(-30deg) skewX(1deg);
+  }
+  70% {
+
+  }
+  100% {
+      filter: invert(0.4);
+    transform: scale(0.6) rotate(30deg);
+  }
+}
+.intro_prog-head {
+  background-color: #c6dafc;
+  height: 4px;
+  overflow: hidden;
+  position: relative;
+}
+.intro_prog .first-indicator,
+.intro_prog .second-indicator {
+  background-color: #056d8b;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  position: absolute;
+  transform-origin: left center;
+  transform: scaleX(0);
+}
+
+.intro_prog .intro_logo {
+  animation: logo_spin infinite 6s linear;
+  border-radius: 50%;
+  align-self: center;
+}
+.intro_logo-frame-img {
+  animation: logo_spin infinite 6s linear;
+}
+@keyframes logo_spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+// ------ TRANSITIONS ------ //
+.fade-enter {
+  transform: translateY(-800px) scale(0.9) perspective(1639px) rotateX(60deg);
+  //transition: transform all ease-in;
+  filter: brightness(2.3) blur(66px);
+  opacity: 0.01;
+}
+.fade-enter-active {
+  transform: translateY(0px) rotateX(0deg);
+  filter: blur(0px);
+  opacity: 1;
+  transition: all 1000ms cubic-bezier(0, 0.45, 0, 0.97);
+}
+.fade-exit {
+  transform: translateY(0px) scale(1) perspective(1400px) rotateX(0deg);
+  filter: blur(0px);
+  opacity: 1;
+}
+
+.fade-exit-active {
+  position: relative;
+  filter: brightness(2.3) blur(10px);
+  transform: translateY(700px) scale(1.2) perspective(1400px) rotateX(90deg);
+  transition: all 300ms cubic-bezier(0.73, 0.06, 1, 0.89);
+  opacity: 0;
+}
+
 body {
   background-color: $backgroundColor;
   height: 100%;
@@ -11,9 +158,20 @@ body {
       width: $pageWidth;
     }
   }
+  &::-webkit-scrollbar {
+    width: 10px;
+    background-color: rgb(141, 133, 133);
+  }
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+  &::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #555;
+  }
 }
 #background {
-  position: absolute;
+  position: fixed;
   height: 100%;
   width: 100%;
   z-index: -100;

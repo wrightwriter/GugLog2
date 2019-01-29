@@ -45,6 +45,8 @@ $pageWidth: 50em;
   font-family: "nimbus-b-i";
   src: url("./fonts/NimbusSanL-BolIta.otf");
 }
+//font-family: 'Major Mono Display', monospace;
+@import url("https://fonts.googleapis.com/css?family=Major+Mono+Display");
 
 // font-family: 'ZCOOL QingKe HuangYou', cursive;
 @import url("https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou");
@@ -54,35 +56,46 @@ $pageWidth: 50em;
 
 @import url("https://fonts.googleapis.com/css?family=Bitter");
 
-// ------ TRANSITIONS ------ //
-.fade-enter {
-  transform: translateY(-400px) scale(0.3) perspective(1400px) rotateX(60deg);
-  //transition: transform all ease-in;
-  opacity: 0.01;
-}
-.fade-enter-active {
-  transform: translateY(0px) rotateX(0deg);
-  opacity: 1;
-  transition: all 700ms ease-out;
-}
-.fade-exit {
-  transform: translateY(0px) scale(1) perspective(1400px) rotateX(0deg);
-  opacity: 1;
-}
-
-.fade-exit-active {
-  position: relative;
-  transform: translateY(400px) scale(1.2) perspective(1400px) rotateX(90deg);
-  transition: all 700ms;
-  opacity: 0;
-}
-
 // ------ Main Start ------ //
-
-
 
 //ttransform: skew(-15deg) translateX(3px) scale(1, 1.1);
 
+@keyframes rubberBand {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
 @keyframes jello2 {
   from,
   11.1%,

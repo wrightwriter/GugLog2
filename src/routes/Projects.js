@@ -3,6 +3,20 @@ import ReactDOM from "react-dom";
 import {Route, Switch} from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 
+import Project_1_Web_Color from '../res/Project_Web_1_Col.png'
+
+
+const Web_Project1 = {
+  title: "Push2ChorDB",
+  description:
+     `A website, in which you can submit edit and save to collection chords for the device Ableton Push 2. You can try out the beta [here on Github](https://wrightwriter.github.io/Push2ChorDB/#/)`,
+  pictures: ["", ""],
+  image: {Project_1_Web_Color},
+  side: "right"
+};
+
+
+
 const Audio_Project1 = {
   title: "SyncFO",
   description:
@@ -33,6 +47,10 @@ export default function Projects() {
   return (
     <div className='Page'>
       <div className='Projects'>
+        <Category title='Web'>
+          <Project project={Web_Project1} />
+          <Project project={Audio_Project2} />
+        </Category>
         <Category title='Audio/ Visual'>
           <Project project={Audio_Project1} />
           <Project project={Audio_Project2} />

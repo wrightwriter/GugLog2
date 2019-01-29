@@ -4,7 +4,6 @@ import {Route, Switch, Link} from "react-router-dom";
 
 export default function Button(props) {
   let {title, to, path} = props;
-  console.log(path)
   let isActive = path == to ? true : false;
   function onMouseEnter() {
     props.toggleStyle("true")

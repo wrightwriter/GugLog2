@@ -1,0 +1,55 @@
+.About {
+  width: 702px;
+  .avatar {
+    display: float;
+    margin-right: auto;
+    img {
+      display: float;
+      float: left;
+      padding-right: 2em;
+      padding-bottom: 0.4em;
+      width: 12em;
+      height: auto;
+    }
+  }
+  .Title {
+    display: flex;
+    flex-wrap:wrap; 
+    .box {
+      padding: 0 0.4em;
+      padding-top: 0.3em;
+      margin: 0em 0.1em;
+      font-size: 2em;
+      background-color: white;
+      color: black;
+      //transform:
+      letter-spacing: 0.3em;
+      font-family: "nimbus";
+      font-weight: 50;
+      &:nth-child(even){
+        margin-left: auto;
+      }
+      &:nth-child(odd){
+        margin-right: auto;
+      }
+    }
+  }
+  .Description {
+    padding: 0 0em;
+    padding-top: 0.7em;
+    font-size: 2em;
+    // background-color: white;
+    color: white;
+    //transform:
+    letter-spacing: 0em;
+    font-family: "Bitter", serif;
+    text-align: justify;
+    font-weight: 50;
+
+    a {
+      color: white;
+      font-weight: 400;
+      // font-size: 1.4em;
+    }
+  }
+}

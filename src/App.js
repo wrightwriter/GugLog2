@@ -24,7 +24,7 @@ function App(props) {
       window.VANTA.WAVES({
         el: "#background",
         color: 0x0,
-        waveHeight: 16.0,
+        waveHeight: 26.0,
         waveSpeed: 0.2,
         zoom: 1.02,
       })
@@ -40,6 +40,7 @@ function App(props) {
       <div id='background' />
       <Header mouseX={mouseX} mouseY={mouseY} />
 
+      <div className='introEffect' />
       <div className='routeWrapper'>
         <Route
           className='potato'
@@ -48,7 +49,7 @@ function App(props) {
               <CSSTransition
                 key={location.pathname}
                 classNames='fade'
-                timeout={600}>
+                timeout={1000}>
                 <Switch location={location} >
                   <Route exact path='/' component={Splash} />
                   <Route path='/projects/' component={Projects} />

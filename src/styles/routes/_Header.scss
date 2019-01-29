@@ -15,18 +15,18 @@ header {
     transition: all 0.3s ease-out;
 
     &:hover {
-      .LastName {
-        transform: scale(1.12, 1) translateX(6%);
-        transition: all 0.2s ease-in;
-      }
-      .FirstName {
-        color: rgba(255, 255, 255, 0);
-        transition: color 700ms ease-in;
-        transition: text-shadow 700ms ease-in;
-        // text-shadow: 0.2em 0.5em 0.9em rgba(255, 255, 255, 0.637),
-        // 0.9em 0.1em 0.6em rgb(255, 255, 255),
-        // 1.2em -0.3em 0.0em rgb(255, 255, 255)
-      }
+      // .LastName {
+      //   transform: scale(1.12, 1) translateX(6%);
+      //   transition: all 0.2s ease-in;
+      // }
+      // .FirstName {
+      //   color: rgba(255, 255, 255, 0);
+      //   transition: color 700ms ease-in;
+      //   transition: text-shadow 700ms ease-in;
+      //   // text-shadow: 0.2em 0.5em 0.9em rgba(255, 255, 255, 0.637),
+      //   // 0.9em 0.1em 0.6em rgb(255, 255, 255),
+      //   // 1.2em -0.3em 0.0em rgb(255, 255, 255)
+      // }
     }
 
     .FirstName {
@@ -37,7 +37,9 @@ header {
       padding-top: -21px;
       transition: color 700ms ease-in;
       transition: text-shadow 1s ease-in;
-      font-family: "arcon"; // style
+        // font-family: "arcon"; // style
+      font-family: 'Allerta Stencil', sans-serif;
+
     }
     .LastName {
       position: relative;
@@ -45,7 +47,11 @@ header {
       top: -30px; //TODO fix size for different screen size
       font-size: 1.5em;
       color: fontColorHeader;
-      font-family: "arvo_bold"; // style
+      font-family: 'Major Mono Display', monospace;
+      &:active {
+        animation: rubberBand ease-in 200ms;
+      }
+      
     }
   }
 

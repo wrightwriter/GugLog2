@@ -6,7 +6,7 @@ import {fetchContactForm} from "./_fetchAPI";
 export default function Contact() {
   // https://script.google.com/macros/s/AKfycbxSGR3c2JgMWS-ykBKXGtBnTVKLH3H_ER7qdB7H8A/exec
 
-  const [form, setForm] = useState("Type stuff");
+  const [form, setForm] = useState("Your inquiry");
   const [name, setName] = useState("Your Name");
 
   return (
