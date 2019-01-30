@@ -22,7 +22,7 @@ export default function Splash() {
           <p>
             I am a web developer and designer, based in Sofia, Bulgaria.
             Currently pursuing a bachelor's degree in Informatics. I like using
-            the MongoDB/Node.JS/React/Express.js stack. It's the basis for my
+            the MongoDB/ Node.JS/ React/ Express.js stack. It's the basis for my
             current project -
             <a href='https://wrightwriter.github.io/Push2ChorDB/#/'>
               Push2ChorDB

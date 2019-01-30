@@ -1,0 +1,120 @@
+@media (max-aspect-ratio: 3/4) {
+  body {
+    font-size: 1em;
+    overflow-x: hidden;
+    text-overflow: clip;
+    .wrapper {
+      display: block;
+      .routeWrapper {
+        & > div {
+          width: auto;
+        }
+        .Page {
+          margin-top: 1.4em;
+          width: 100%;
+          // margin-bottom: 12%;
+          .About {
+            margin-bottom: 12%;
+            // white-space: nowrap;
+            // margin: 0 5%;
+            div {
+              width: auto;
+            }
+            img {
+              margin-left: 2%;
+            }
+            .Description {
+              margin: 0 2%;
+            }
+            font-size: 0.8em;
+            width: 100%;
+          }
+          .Contact {
+            @media screen and (max-aspect-ratio: 15/16) {
+              .UpperDiv {
+                width: 151%;
+              }
+            }
+            @media screen and (max-aspect-ratio: 15/16) {
+              .UpperDiv {
+                width: 89%;
+              }
+            }
+            textarea {
+              width: 85%;
+            }
+          }
+          .Projects {
+            margin-top: -10%;
+            .CategoryTitle {
+              div {
+                width: 96%;
+                margin-right: auto;
+                margin-left: auto;
+              }
+            }
+            .title {
+              margin: 0 1.7%;
+            }
+            .description {
+              margin: 0 1.7%;
+            }
+            img {
+              width: 90%;
+              display: block;
+              // float: none;
+              margin-left: auto;
+              margin-right: auto;
+              margin-bottom: 2em;
+            }
+            .Project {
+              &::after {
+                content: "";
+                display: block;
+                margin-top: 10px;
+                width: 900px;
+                border-bottom: 2px solid white;
+              }
+            }
+          }
+        }
+      }
+      header {
+        flex-direction: column;
+        .Name {
+          margin-left: auto;
+          margin-right: auto;
+          padding-top: 1em;
+          padding-left: 0;
+          padding-right: 0;
+        }
+        .Buttons {
+          padding-top: 1em;
+          padding-left: 0px;
+          padding-right: 0px;
+          margin: 0 auto;
+          @media screen and (max-width: 350) {
+            flex-wrap: wrap;
+          }
+          // flex-wrap: wrap;
+          .Button {
+            height: 2em;
+          }
+        }
+      }
+    }
+  }
+}
+
+.intro_prog {
+  padding: auto;
+  margin: auto;
+  div {
+    padding: auto;
+    margin: auto;
+    div {
+      padding: auto;
+      margin: auto;
+    }
+  }
+}

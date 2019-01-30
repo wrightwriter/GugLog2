@@ -2,8 +2,9 @@
 
 .intro_prog.available {
   background-color: black;
-  transform: translateY(-100%);
+  transform: translateY(-120%);
   transition: all ease-in 300ms;
+  filter: blur(8px);
   opacity: 1;
 }
 .intro_prog {
@@ -41,7 +42,7 @@
       animation: trianglejump 800ms infinite;
       svg {
         animation: trianglechange 1000ms infinite;
-        transform: rotate(0deg) translateY(120px);
+        transform: rotate(0deg) translateY(180px);
         fill: white;
       }
     }
@@ -49,14 +50,14 @@
       animation: trianglejump 500ms infinite;
       svg {
         animation: trianglechange 700ms infinite;
-        transform: rotate(120deg) translateY(120px);
+        transform: rotate(120deg) translateY(180px);
       }
     }
     &:nth-child(3) {
       animation: trianglejump 1000ms infinite;
       svg {
         animation: trianglechange 120ms infinite;
-        transform: rotate(240deg) translateY(120px);
+        transform: rotate(240deg) translateY(180px);
       }
     }
   }

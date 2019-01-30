@@ -20,6 +20,8 @@ $pageWidth: 50em;
 @import "./routes/Projects";
 @import "./main";
 
+@import './smallscreens';
+
 // -=----- Fonts -=----- //
 @font-face {
   font-family: "arvo_bold";
@@ -54,8 +56,9 @@ $pageWidth: 50em;
 @import url("https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i");
 //font-family: 'Bitter', serif;
 @import url("https://fonts.googleapis.com/css?family=Bitter");
-// font-family: 'Allerta Stencil', sans-serif;
-@import url('https://fonts.googleapis.com/css?family=Allerta+Stencil');
+// font-family: 'Slabo 27px', serif;
+
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px');
 
 // ------ Main Start ------ //
 

@@ -1,55 +1,52 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import ReactDOM from "react-dom";
 import {Route, Switch} from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 
-import Project_1_Web_Color from '../res/Project_Web_1_Col.png'
-
+import Project_1_Web_Color from "../res/Project_Web_1_Col.png";
 
 const Web_Project1 = {
   title: "Push2ChorDB",
-  description:
-     `A website, in which you can submit edit and save to collection chords for the device Ableton Push 2. You can try out the beta [here on Github](https://wrightwriter.github.io/Push2ChorDB/#/)`,
+  description: `A website, in which you can submit edit and save to collection chords for the device Ableton Push 2. You can try out the beta [here on Github](https://wrightwriter.github.io/Push2ChorDB/#/)`,
   image: "https://i.imgur.com/GM9brQS.png",
-  side: "right"
+  side: "right",
 };
-
-
 
 const Audio_Project1 = {
   title: "SyncFO",
-  description:
-    `This is a plugin for the digital audio workstation Ableton Live. It acts as an LFO, whose speed can me modulated by a MIDI signal. Signal shape be changed and speed - manipulated.   
+  description: `This is a plugin for the digital audio workstation Ableton Live. It acts as an LFO, whose speed can me modulated by a MIDI signal. Signal shape be changed and speed - manipulated.   
     [Download](https://github.com/wrightwriter/SyncoPan)`,
   image: "",
-  side: "left"
+  side: "left",
 };
 const Audio_Project2 = {
   title: "Visual Projects",
-  description: "Shaders and visual programming are cool, and go nicely with music. I have been using Max MSP to make trippy visal toys, which respond to my music. I also have some experience with WebGL and Three.JS",
+  description:
+    "Shaders and visual programming are cool, and go nicely with music. I have been using Max MSP to make trippy visal toys, which respond to my music. I also have some experience with WebGL and Three.JS",
   image: "",
-  side: "right"
+  side: "right",
 };
 
 const Script_Project1 = {
   title: "SC Demetricator",
-  description: "A browser plugin which removes not only the likes, but most metrics from the site Soundcloud. Peek at the source code on [Github](https://github.com/wrightwriter/SC_Demetricator)",
+  description:
+    "A browser plugin which removes not only the likes, but most metrics from the site Soundcloud. Peek at the source code on [Github](https://github.com/wrightwriter/SC_Demetricator)",
   image: "https://i.imgur.com/lskPqUU.png",
-  side: "left"
-}
+  side: "left",
+};
 const Script_Project2 = {
   title: "FB Demetricator",
-  description: "The same plugin as above, for Facebook Mobile.",
+  description: "A port of the abovementioned plugin, so it can function on Facebook Mobile.",
   image: "https://i.imgur.com/oSUbiSI.png",
-  side: "right"
-}
+  side: "right",
+};
 const Script_Project3 = {
   title: "AutoTagger",
-  description: "A python script, which goes through your downloaded MP3s and automatigally tags them, according to how you've named them. Required naming format 'Artist - Songname' [Check it out on github](https://github.com/wrightwriter/AutoTagger)",
+  description:
+    "A python script, which goes through your downloaded MP3s and automatigally tags them, according to how you've named them. Required naming format 'Artist - Songname' [Check it out on github](https://github.com/wrightwriter/AutoTagger)",
   image: "",
-  side: "left"
-}
-
+  side: "left",
+};
 
 export default function Projects() {
   return (
@@ -85,12 +82,23 @@ function Category(props) {
 
 function Project(props) {
   let project = props.project;
+  const [imgStyle, setImgStyle] = useState({float: "none"});
 
-  let imgStyle;
+  let text = ``;
+  useEffect(() => {
+    if (project.side == "left") {
+      setImgStyle({
+        float: "left",
+      });
+    } else {
+      setImgStyle({float: "right"});
+    }
 
-  project.side == "left" ? imgStyle ={float: "left"} : imgStyle = {float: "right"};
-
-
+    var mediaQuery = window.matchMedia("(max-width: 500px)");
+    if (mediaQuery.matches) {
+      setImgStyle({float: "none"});
+    }
+  });
   return (
     <article className='Project'>
       {project.image ? <img style={imgStyle} src={project.image} /> : <></>}
@@ -98,11 +106,16 @@ function Project(props) {
         <div className='title'>{project.title}</div>
 
         <div className='description'>
-          <ReactMarkdown source={project.description} 
-          
-          renderers={{Link: props => <a href={props.href} target="_blank">{props.children}</a>}} />
-
-
+          <ReactMarkdown
+            source={project.description}
+            renderers={{
+              Link: props => (
+                <a href={props.href} target='_blank'>
+                  {props.children}
+                </a>
+              ),
+            }}
+          />
         </div>
       </div>
     </article>
