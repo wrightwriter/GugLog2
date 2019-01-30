@@ -49,7 +49,7 @@ export default class Name extends Component {
     setTimeout(() => {
       clearInterval(inter);
       this.setState({currentName: this.state.lastName});
-    }, 848);
+    }, 148);
   }
   render() {
     return (
