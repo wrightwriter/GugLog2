@@ -47,6 +47,13 @@ const Script_Project3 = {
   image: "",
   side: "left",
 };
+const Script_Project4 = {
+  title: "Youtube UnDistractor",
+  description:
+    "It's very easy to get distracted on the internet. Your interests are harvested by corporations, such that you spend as much time as possible browsing. I think you should be ablet to opt out. That's why I wrote this extension, which lets you be the one to decide wether to get recommendations on YouTube. [Chrome extension](https://chrome.google.com/webstore/detail/youtube-undistractor/kobhfnheaeonfagploiaikaiiffamnbe) [UserScript](https://github.com/wrightwriter/YouTube-Undistractor/raw/master/UserScript/script.js) [GitHub](https://github.com/wrightwriter/YouTube-Undistractor)",
+  image: "https://i.imgur.com/i7KXNLR.png",
+  side: "left",
+};
 
 export default function Projects() {
   return (
@@ -55,14 +62,15 @@ export default function Projects() {
         <Category title='Web'>
           <Project project={Web_Project1} />
         </Category>
-        <Category title='Audio/ Visual'>
-          <Project project={Audio_Project1} />
-          <Project project={Audio_Project2} />
-        </Category>
         <Category title='Scripts'>
+          <Project project={Script_Project4} />
           <Project project={Script_Project1} />
           <Project project={Script_Project2} />
           <Project project={Script_Project3} />
+        </Category>
+        <Category title='Audio/ Visual'>
+          <Project project={Audio_Project1} />
+          <Project project={Audio_Project2} />
         </Category>
       </div>
     </div>

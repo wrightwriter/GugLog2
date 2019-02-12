@@ -20,7 +20,7 @@ import Name from "./Name";
     if (toggle=="true"){
       setStyle(`#background {
         transition: all 300ms ease-in;
-        filter: brightness(1.3) blur(10px);
+        filter: brightness(0.7) blur(2.6px);
       }`)
     } else if (toggle=="false"){
       setStyle(`#background {

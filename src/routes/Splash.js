@@ -20,10 +20,9 @@ export default function Splash() {
 
         <div className='Description'>
           <p>
-            I am a web developer and designer, based in Sofia, Bulgaria.
+            Web developer,  based in Sofia, Bulgaria.
             Currently pursuing a bachelor's degree in Informatics. I like using
-            the MongoDB/ Node.JS/ React/ Express.js stack. It's the basis for my
-            current project -
+            the MongoDB/ Node.JS/ React/ Express.js stack. My current project uses it -
             <a href='https://wrightwriter.github.io/Push2ChorDB/#/'>
               Push2ChorDB
             </a>
@@ -31,10 +30,11 @@ export default function Splash() {
           </p>
           <br />
           <p>
-            You can also{" "}
-            <a href='https://soundcloud.com/guglata/augulis'>check out</a> some
-            of my music{" "}
-            <a href='https://soundcloud.com/guglata/heliquin'>here</a>.
+            I {" "}  
+            <a href='https://soundcloud.com/guglata/augulis'>sometimes</a> make
+            
+            {" "}
+            <a href='https://soundcloud.com/guglata/heliquin'>music</a>.
           </p>
         </div>
       </div>

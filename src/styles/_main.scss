@@ -18,8 +18,6 @@
   z-index: 9999;
 }
 .intro_logo-frame {
-  display: -webkit-flex;
-  display: -moz-flex;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -129,7 +127,7 @@
 }
 // ------ TRANSITIONS ------ //
 .fade-enter {
-  transform: translateY(-800px) scale(0.9) perspective(1639px) rotateX(60deg);
+  transform: translateY(-800px) scale(1.0) rotateX(60deg);
   //transition: transform all ease-in;
   filter: brightness(2.3) blur(66px);
   opacity: 0.01;
